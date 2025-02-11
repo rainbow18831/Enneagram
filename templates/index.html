@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test de Eneagrama Adaptativo</title>
+
+    <!-- Load CSS -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='index.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Test de Eneagrama Adaptativo</h1>
+
+    <div id="pregunta-container">
+      <p id="texto-pregunta"><em>Esperando la primera pregunta...</em></p>
+      <input
+        type="number"
+        id="respuesta-input"
+        min="1"
+        max="5"
+        placeholder="Respuesta (1-5)"
+      />
+      <button id="btn-enviar" disabled>Enviar</button>
+    </div>
+
+    <div id="resultado-container" class="oculto">
+      <h2>Resultados</h2>
+      <p id="texto-resultado"></p>
+      <canvas id="myChart"></canvas>
+    </div>
+
+    <!-- Load JavaScript -->
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+  </body>
+</html>
